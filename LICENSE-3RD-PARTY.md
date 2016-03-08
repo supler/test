@@ -1,8 +1,6 @@
 ==============================================================================
-Apache Commons CLI, Apache Commons Logging, Apache Commons IO, Apache Avalon Framework, <br/>Ini4j,  Commons DBCP, Apache Jasper Glassfish, Jetty Webapp, Apache Commons Collections,<br/>Commons Pool, Apache Commons Lang, Google Diff Match Patch
+Apache Commons CLI, Apache Commons Logging, Apache Commons IO,<br/>Apache Avalon Framework, Ini4j,  Commons DBCP, Apache Jasper Glassfish,<br/>Jetty Webapp, Apache Commons Collections, Commons Pool, Apache Commons Lang, Google Diff Match Patch
 ==============================================================================
- 
-
 
                                  Apache License
                            Version 2.0, January 2004
@@ -205,9 +203,7 @@ Apache Commons CLI, Apache Commons Logging, Apache Commons IO, Apache Avalon Fra
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-   
-   
-   
+      
 ==============================================================================
 Jsch
 ==============================================================================
@@ -275,7 +271,6 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING 
 WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
 DAMAGE.
 
-
 ==============================================================================
 Dom4j
 ==============================================================================
@@ -338,9 +333,9 @@ COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
 
       Conditioned upon Your compliance with Section 3.1 below and subject to third party intellectual property claims, the Initial Developer hereby grants You a world-wide, royalty-free, non-exclusive license:
 
-         (a) under intellectual property rights (other than patent or trademark) Licensable by Initial Developer, to use, reproduce, modify, display, perform, sublicense and distribute the Original Software (or portions thereof), with or without Modifications, and/or as part of a Larger Work; and
+        (a) under intellectual property rights (other than patent or trademark) Licensable by Initial Developer, to use, reproduce, modify, display, perform, sublicense and distribute the Original Software (or portions thereof), with or without Modifications, and/or as part of a Larger Work; and
 
-         (b) under Patent Claims infringed by the making, using or selling of Original Software, to make, have made, use, practice, sell, and offer for sale, and/or otherwise dispose of the Original Software (or portions thereof).
+        (b) under Patent Claims infringed by the making, using or selling of Original Software, to make, have made, use, practice, sell, and offer for sale, and/or otherwise dispose of the Original Software (or portions thereof).
 
         (c) The licenses granted in Sections 2.1(a) and (b) are effective on the date Initial Developer first distributes or otherwise makes the Original Software available to a third party under the terms of this License.
 

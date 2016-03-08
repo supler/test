@@ -1,7 +1,6 @@
 ==============================================================================
 Apache Commons CLI, Apache Commons Logging, Apache Commons IO,<br/>Apache Avalon Framework, Ini4j,  Commons DBCP, Apache Jasper Glassfish,<br/>Jetty Webapp, Apache Commons Collections, Commons Pool, Apache Commons Lang, Google Diff Match Patch
 ==============================================================================
-<div>
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -183,7 +182,7 @@ Apache Commons CLI, Apache Commons Logging, Apache Commons IO,<br/>Apache Avalon
 
       To apply the Apache License to your work, attach the following
       boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
+      replaced with your own identifying information. (Don''t include
       the brackets!)  The text should be enclosed in the appropriate
       comment syntax for the file format. We also recommend that a
       file or class name and description of purpose be included on the
@@ -203,7 +202,7 @@ Apache Commons CLI, Apache Commons Logging, Apache Commons IO,<br/>Apache Avalon
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-</div>      
+
 ==============================================================================
 Jsch
 ==============================================================================

@@ -61,10 +61,10 @@ You can find the final jars from directory CTP/sql/lib/cubridqa-cqt.jar.
 Using CTP involves steps:
 
 * get testing scenario
-   ** git clone git://github.com/../xx.git $HOME/dailyqa/trunk
+   * git clone git://github.com/../xx.git $HOME/dailyqa/trunk
 
 * configure testing
-   ** prepare configuration file for the functional testing, such as port, CUBRID system parameters for your testing,
+   * prepare configuration file for the functional testing, such as port, CUBRID system parameters for your testing,
      the below is an example for your reference
 
      ```yaml
@@ -99,19 +99,19 @@ Using CTP involves steps:
      ```
      
 * execute test
-   ** For SQL/Medium
+   * For SQL/Medium
 
-        *** ctp sql -c $HOME/CTP/conf/sql.conf
-        *** ctp medium -c $HOME/CTP/conf/medium.conf
+        * ctp sql -c $HOME/CTP/conf/sql.conf
+        * ctp medium -c $HOME/CTP/conf/medium.conf
         
 * to view testing results
-   ** For SQL/Medium
+   * For SQL/Medium
 
-        *** Once testing is complete, result directory will be printed.
-        *** Go to result directory, and find the ralted folder for your result checking. if you want to check your results from website,
+        * Once testing is complete, result directory will be printed.
+        * Go to result directory, and find the ralted folder for your result checking. if you want to check your results from website,
           you can start webconsole service, which will help you to show result based on website. 
-             **** ``ctp webconsole start ``, the command will print the URL of result view.
-             **** open url you get from command above "http://xxx.xxx.xx.xx:xxxx"
+             * ``ctp webconsole start ``, the command will print the URL of result view.
+             * open url you get from command above "http://xxx.xxx.xx.xx:xxxx"
 
 ## License
 CTP is published under the BSD 3-Cause license. See LICENSE.md for more details.

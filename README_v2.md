@@ -12,12 +12,16 @@ and result showing into one. it is easy to execute testing with a simple configu
 ## Quick start
 ``` cd $HOME/CTP
     sh bin/ctp.sh sql -c conf/sample.conf
-    ```
+    
+ ```
+    
     * Once the testing is finished, and then to start webconsole to see result
 ```
     cd $HOME/CTP
     sh bin/ctp.sh webconsole start
-    ```
+    
+```
+    
     * You will see the information as below
 ```
     [colin@NC-PL-QA024 CTP]$ sh bin/ctp.sh webconsole start
@@ -26,8 +30,10 @@ and result showing into one. it is easy to execute testing with a simple configu
 	Begin to start ...
 
 	Done
-	URL:  http://127.0.0.1:8888      
+	URL:  http://127.0.0.1:8888    
+	  
 	```
+	
     * Copy URL into browser, and you will see the result list
         
     

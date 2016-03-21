@@ -7,18 +7,33 @@ and result showing into one. it is easy to execute testing with a simple configu
 ## Requirements
 * Java 1.6 or 1.7, and configure Java environment variable JAVA_HOME.
 * Install CUBRID build, and make sure the related environment variable of CUBRID is configured correctly.
+* To get CTP program from github via command `git clone git://github.com/.../CTP/ctp.git $HOME/CTP`
 
 ## Quick start
+``` cd $HOME/CTP
+    sh bin/ctp.sh sql -c conf/sample.conf
+    ```
+    * Once the testing is finished, and then to start webconsole to see result
+```
+    cd $HOME/CTP
+    sh bin/ctp.sh webconsole start
+    ```
+    * You will see the information as below
+```
+    [colin@NC-PL-QA024 CTP]$ sh bin/ctp.sh webconsole start
+	Config: /home/user/CTP/conf/webconsole.conf
+	Web Root: /home/user/CTP/sql/webconsole
+	Begin to start ...
 
-
+	Done
+	URL:  http://127.0.0.1:8888      
+	```
+    * Copy URL into browser, and you will see the result list
+        
+    
 ## Usage
 
 Using CTP involves steps:
-
-1. get CTP program
-   * git clone git://github.com/.../CTP/ctp.git $HOME/CTP , then export PATH=$HOME/CTP/bin:$PATH
-   * cd $HOME/CTP/bin
-   * ln -s ctp.sh ctp
 
 2. get testing scenario
    * git clone git://github.com/../xx.git $HOME/dailyqa/trunk

@@ -31,7 +31,7 @@ and result showing into one. it is easy to execute testing with a simple configu
 * You will see the information as below
     
 ```
-    [colin@NC-PL-QA024 CTP]$ sh bin/ctp.sh webconsole start
+    [user@abcdefg CTP]$ sh bin/ctp.sh webconsole start
 	Config: /home/user/CTP/conf/webconsole.conf
 	Web Root: /home/user/CTP/sql/webconsole
 	Begin to start ...
@@ -43,12 +43,24 @@ and result showing into one. it is easy to execute testing with a simple configu
 	
 * Copy URL into browser, and you will see the result list
         
-    
+## Building from source
+
+In most cases, you don't need to build CTP from source, unless you make some changes for source codes.
+
+```
+   cd $HOME/CTP
+   ant dist
+   
+```
+
+You can find the final jars from directory CTP/sql/lib/cubridqa-cqt.jar.
+
+   
 ## Usage
 
 Using CTP involves steps:
 
-2. get testing scenario
+1. get testing scenario
    * git clone git://github.com/../xx.git $HOME/dailyqa/trunk
 3. configure testing
    * prepare configuration file for the functional testing, such as port, CUBRID system parameters for your testing,

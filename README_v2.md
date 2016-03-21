@@ -62,9 +62,11 @@ Using CTP involves steps:
 
 * get testing scenario
    ** git clone git://github.com/../xx.git $HOME/dailyqa/trunk
+
 * configure testing
    ** prepare configuration file for the functional testing, such as port, CUBRID system parameters for your testing,
      the below is an example for your reference
+
      ```yaml
      
       cat $HOME/CTP/conf/sql.conf
@@ -98,10 +100,13 @@ Using CTP involves steps:
      
 * execute test
    ** For SQL/Medium
+
         *** ctp sql -c $HOME/CTP/conf/sql.conf
         *** ctp medium -c $HOME/CTP/conf/medium.conf
+        
 * to view testing results
    ** For SQL/Medium
+
         *** Once testing is complete, result directory will be printed.
         *** Go to result directory, and find the ralted folder for your result checking. if you want to check your results from website,
           you can start webconsole service, which will help you to show result based on website. 

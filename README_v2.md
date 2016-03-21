@@ -10,19 +10,24 @@ and result showing into one. it is easy to execute testing with a simple configu
 * To get CTP program from github via command `git clone git://github.com/.../CTP/ctp.git $HOME/CTP`
 
 ## Quick start
-``` cd $HOME/CTP
+
+``` 
+
+    cd $HOME/CTP
     sh bin/ctp.sh sql -c conf/sample.conf
     
  ```
-    
     * Once the testing is finished, and then to start webconsole to see result
+    
 ```
+
     cd $HOME/CTP
     sh bin/ctp.sh webconsole start
     
 ```
     
     * You will see the information as below
+    
 ```
     [colin@NC-PL-QA024 CTP]$ sh bin/ctp.sh webconsole start
 	Config: /home/user/CTP/conf/webconsole.conf
@@ -32,7 +37,7 @@ and result showing into one. it is easy to execute testing with a simple configu
 	Done
 	URL:  http://127.0.0.1:8888    
 	  
-	```
+```
 	
     * Copy URL into browser, and you will see the result list
         

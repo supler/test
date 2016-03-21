@@ -10,6 +10,7 @@ and result showing into one. it is easy to execute testing with a simple configu
 * To get CTP program from github via command `git clone git://github.com/.../CTP/ctp.git $HOME/CTP`
 
 ## Quick start
+* Execute sample testing with the below commands:
 
 ``` 
 
@@ -17,7 +18,8 @@ and result showing into one. it is easy to execute testing with a simple configu
     sh bin/ctp.sh sql -c conf/sample.conf
     
  ```
-    * Once the testing is finished, and then to start webconsole to see result
+ 
+* Once the testing is finished, and then to start webconsole to see result
     
 ```
 
@@ -26,7 +28,7 @@ and result showing into one. it is easy to execute testing with a simple configu
     
 ```
     
-    * You will see the information as below
+* You will see the information as below
     
 ```
     [colin@NC-PL-QA024 CTP]$ sh bin/ctp.sh webconsole start
@@ -39,7 +41,7 @@ and result showing into one. it is easy to execute testing with a simple configu
 	  
 ```
 	
-    * Copy URL into browser, and you will see the result list
+* Copy URL into browser, and you will see the result list
         
     
 ## Usage

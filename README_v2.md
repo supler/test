@@ -120,15 +120,14 @@ Using CTP involves steps:
 	                       /answers
 	                             /int_primary_key_test.answer
 ```
-   
-    NOTE: 
-         * the keywork "cases" and "answers" must be included
-         * the root name of script(we suggest you give a meaningful root name, it will help reader to understand the intent of your script)
-         * when you write one new script, answer file may be difficult to generate it, but you don't need worry about it, you just need touch one blank answer file which has same name as case's, but the extension of answer file must be ".answer", and then to execute
+NOTE: 
+* the keywork "cases" and "answers" must be included
+* the root name of script(we suggest you give a meaningful root name, it will help reader to understand the intent of your script)
+* when you write one new script, answer file may be difficult to generate it, but you don't need worry about it, you just need touch one blank answer file which has same name as case's, but the extension of answer file must be ".answer", and then to execute
            your script by using CTP tool,CTP tool will generate the related result file in cases folder which has same name as case's, but the extension of result should be ".result". And now you can examine the result contents are expected or not, once all contents 
            are confirmed, you can just copy result file contents to answer file as the expected results for future reference in testing.   
-         * CTP supports all SQL statements which are supported by CUBRID, but I would like to clarify for some special syntax.
-           * prepare statement, you just need write script as the below format, and CTP will do value binding 
+* CTP supports all SQL statements which are supported by CUBRID, but I would like to clarify for some special syntax.
+* prepare statement, you just need write script as the below format, and CTP will do value binding 
            
            ```
            prepare st from 'select trunc(?,?)'
@@ -136,7 +135,7 @@ Using CTP involves steps:
            deallocate prepare st;
            ```
            
-           * user defined variables
+* user defined variables
            
            ```
            set @v1=1;
@@ -144,7 +143,7 @@ Using CTP involves steps:
            drop variable @v1;
            ```
            
-           * for I18N scenario, you can set charset into script. If you want to run all cases with the different database charset and client charset, you just need configure the conf file you used for db_charset and client charset file under CTP/conf/,
+* for I18N scenario, you can set charset into script. If you want to run all cases with the different database charset and client charset, you just need configure the conf file you used for db_charset and client charset file under CTP/conf/,
              the value of db_charset will be used to db creation, and client charset files are based on CTP/sql/configuration/test_config/ directory, you can choose one that meets your required or create new one for your test.
            
            ```

@@ -5,7 +5,7 @@
 ## Quick start
 (simplest guide. without any modification of config files of ctp or cubrid. you can use default config and demodb)
 ## How to run
-###### Prepare
+#### Prepare
 (guide about Setup for scenario, Configure files, Start Database, ..... and you need to add information of ctp's config files.)
 #### Run Tests
 (how to? usage?)

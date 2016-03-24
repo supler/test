@@ -98,14 +98,14 @@ Using CTP involves steps:
      
 * execute test
    * For SQL/Medium
-        * ctp sql -c $HOME/CTP/conf/sql.conf
-        * ctp medium -c $HOME/CTP/conf/medium.conf
+        * sh ${CTP_HOME}/bin/ctp.sh sql -c $HOME/CTP/conf/sql.conf
+        * sh ${CTP_HOME}/bin/ctp.sh medium -c $HOME/CTP/conf/medium.conf
 * view testing results
    * For SQL/Medium
         * Once testing is complete, result directory will be printed.
         * Go to result directory, and find the ralated folder for your result checking. if you want to check your results from website,
           you can start webconsole service, which will help you to show result based on website. 
-             * ``ctp webconsole start ``, the command will print the URL of result view.
+             * ``sh ${CTP_HOME}/bin/ctp.sh webconsole start ``, the command will print the URL of result view.
              * open url you get from command above "http://xxx.xxx.xx.xx:xxxx"
             
 ## How to write test script
@@ -120,7 +120,6 @@ If you want to write test script based on CTP tool, you must follow the below ru
 	                       /answers
 	                             /int_primary_key_test.answer
 ```
-NOTE: 
   * the keywork "cases" and "answers" must be included
   * the root name of script(we suggest you give a meaningful root name, it will help reader to understand the intent of your script)
   * when you write one new script, answer file may be difficult to generate it, but you don't need worry about it, you just need touch one blank answer file which has same name as case's, but the extension of answer file must be ".answer", and then to execute

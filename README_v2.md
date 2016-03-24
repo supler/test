@@ -1,20 +1,19 @@
 # CTP - CUBRID Test Program
 
 ## Introduction
-CTP as testing tool for an open source project CUBRID, which is developed based on Java language, and it integrates functional testing, non-functional testing 
-and result showing into one. it is easy to execute testing with a simple configuration. 
+CTP as testing tool for an open source project CUBRID, which is developed based on Java language, and it integrates functional testing and result showing into one suite. It is easy to execute testing with a simple configuration. 
 
 ## Requirements
 * Java 1.6 or higher, and configure Java environment variable "export JAVA_HOME=$java_installation_path".
 * Install CUBRID build, and make sure the related environment variable of CUBRID is configured correctly.
-* To get CTP program from github via command `git clone git://github.com/.../CTP/ctp.git $HOME/CTP`
+* To get CTP program from github via command `git clone git://github.com/CUBRID/cubrid-testtools/CTP/ctp.git $HOME/CTP`
 
 ## Quick start
 * Execute sample testing with the below commands:
 
 ``` 
 
-    cd $HOME/CTP
+    cd ${HOME}/CTP
     sh bin/ctp.sh sql -c conf/sample.conf
     
  ```
@@ -23,7 +22,7 @@ and result showing into one. it is easy to execute testing with a simple configu
     
 ```
 
-    cd $HOME/CTP
+    cd ${HOME}/CTP
     sh bin/ctp.sh webconsole start
     
 ```
@@ -31,7 +30,7 @@ and result showing into one. it is easy to execute testing with a simple configu
 * You will see the information as below
     
 ```
-    [user@abcdefg CTP]$ sh bin/ctp.sh webconsole start
+    [user@hostname CTP]$ sh bin/ctp.sh webconsole start
 	Config: /home/user/CTP/conf/webconsole.conf
 	Web Root: /home/user/CTP/sql/webconsole
 	Begin to start ...
@@ -68,10 +67,12 @@ Using CTP involves steps:
      ```yaml
      
       cat $HOME/CTP/conf/sql.conf
-      scenario=${HOME}/dailyqa/trunk/scenario/sql
+      [sql]
+      scenario=${HOME}/dailyqa/trunk/scenario2/sql_ext/_01_object
+      category_alias=sql
       config_file=test_default.xml
       db_charset=en_US
-         
+
       [sql/cubrid.conf]
       java_stored_procedure=yes
       test_mode=yes
@@ -80,26 +81,27 @@ Using CTP involves steps:
       cubrid_port_id=1822
       ha_mode=yes
       lock_timeout=10sec
-         
+
       [sql/cubrid_ha.conf]
       ha_mode=yes
       ha_apply_max_mem_size=300
-         
+
       [sql/cubrid_broker.conf/%query_editor]
       SERVICE=OFF
-         
+
       [sql/cubrid_broker.conf/%BROKER1]
       BROKER_PORT=33120
       APPL_SERVER_SHM_ID=33120
-         
       [sql/cubrid_broker.conf/broker]
       MASTER_SHM_ID=33122
+
+
      ```
      
 * execute test
    * For SQL/Medium
-        * sh ${CTP_HOME}/bin/ctp.sh sql -c $HOME/CTP/conf/sql.conf
-        * sh ${CTP_HOME}/bin/ctp.sh medium -c $HOME/CTP/conf/medium.conf
+        * sh ${CTP_HOME}/bin/ctp.sh sql -c ${HOME}/CTP/conf/sql.conf
+        * sh ${CTP_HOME}/bin/ctp.sh medium -c ${HOME}/CTP/conf/medium.conf
 * view testing results
    * For SQL/Medium
         * Once testing is complete, result directory will be printed.
@@ -120,7 +122,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
 	                       /answers
 	                             /int_primary_key_test.answer
 ```
-  * the keywork "cases" and "answers" must be included
+  * the keyword "cases" and "answers" must be included
   * the root name of script(we suggest you give a meaningful root name, it will help reader to understand the intent of your script)
   * when you write one new script, answer file may be difficult to generate it, but you don't need worry about it, you just need touch one blank answer file which has same name as case's, but the extension of answer file must be ".answer", and then to execute
            your script by using CTP tool,CTP tool will generate the related result file in cases folder which has same name as case's, but the extension of result should be ".result". And now you can examine the result contents are expected or not, once all contents 

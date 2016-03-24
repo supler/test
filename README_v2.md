@@ -109,9 +109,9 @@ Using CTP involves steps:
              * open url you get from command above "http://xxx.xxx.xx.xx:xxxx"
             
 ## How to write test script
-* If you want to write test script based on CTP tool, you must follow the below rules, only that kind of script which meets the specification of CTP will be recognized and executed correctly.
-  * the extension of script file must be .sql, and the answer of script which will be used to examine success or fail must be end with .answer
-  * the structure of script must same as the below
+If you want to write test script based on CTP tool, you must follow the below rules, only that kind of script which meets the specification of CTP will be recognized and executed correctly：
+* the extension of script file must be .sql, and the answer of script which will be used to examine success or fail must be end with .answer
+* the structure of script must same as the below
 
 ```
 	 _08_primary_foreign_key

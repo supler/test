@@ -154,6 +154,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
 
 * for queryPlan, if you want to examine queryPlan from testing result, you will have two options to configure that, and once it is configured, the related SQL statement will print query plan data with results
   * touch one blank file name as case_name.queryPlan to save it into same directory with case, so the results of all queries statement will print query plan data.
+
 ```
 	 _08_primary_foreign_key
 	                       /cases
@@ -162,7 +163,8 @@ If you want to write test script based on CTP tool, you must follow the below ru
 	                       /answers
 	                             /int_primary_key_test.answer
 ```
-        * or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
+
+   * or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
     
 ```
 	--@queryplan

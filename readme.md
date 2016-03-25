@@ -96,7 +96,7 @@ Begin to start ...
 Done
 URL:  http://127.0.0.1:8887
 ```
-  * open URL and click the related result for details
+   open URL and click the related result for details
   
         
 ## How to build
@@ -163,14 +163,30 @@ If you want to write test script based on CTP tool, you must follow the below ru
 	                       /answers
 	                             /int_primary_key_test.answer
 ```
-    * or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
+    or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
     
 ```
 	--@queryplan
 	select /*+ recompile */ median(a) from x;
 	select /*+ recompile */ median(b) from x;
-```           
-      
+```
+
+  * for the transaction isolation level, you can set it in your case script as the below syntax
+
+```
+        SET TRANSACTION ISOLATION LEVEL 1;
+        select /*+ recompile */ median(a) from x;
+        select /*+ recompile */ median(b) from x;
+
+        SET TRANSACTION ISOLATION LEVEL 2;
+        select /*+ recompile */ median(a) from x;
+        select /*+ recompile */ median(b) from x;
+
+        SET TRANSACTION ISOLATION LEVEL 3;
+        select /*+ recompile */ median(a) from x;
+        select /*+ recompile */ median(b) from x;
+```
+  that will make the following statements are executed with the corresponding transaction isolation level.
 
 ## License
 CTP is published under the BSD 3-Cause license. See LICENSE.md for more details.

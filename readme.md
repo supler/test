@@ -8,7 +8,7 @@ CTP as testing tool for an open source project CUBRID, which is developed based 
 * Install CUBRID build, and make sure the related environment variable of CUBRID is configured correctly.
 
 ## Quick start
-* Execute sample testing with the below commands:
+* Execute sample testing with the below command:
 
     ``` 
 
@@ -101,7 +101,7 @@ Using CTP involves steps:
         
 ## How to build
 
-In most cases, you don't need to build CTP from source, unless you make some changes for source codes. If you want to build source, you need install ant first, and then to execute the following commands to build source codes.
+In most cases, you don't need to build CTP from source, unless you make some changes for source code. If you want to build source, please install ant first, and then to execute the following command to build source codes.
 
 ```
    ant clean dist
@@ -111,9 +111,9 @@ You can find the final jars from directory CTP/sql/lib/cubridqa-cqt.jar.
 
              
 ## How to write test script
-If you want to write test script based on CTP tool, you must follow the below rules, only that kind of script which meets the specification of CTP will be recognized and executed correctly：
-* the extension of script file must be .sql, and the answer of script which will be used to examine success or fail must be end with .answer
-* the structure of script must same as the below
+If you want to write test script based on CTP tool, you must follow the below rules, only the script which meets the specification of CTP will be recognized and executed correctly：
+* the extension of script file must be .sql, and the answer of script will be used to examine success or fail, which must be ended with .answer
+* the structure of script must be same as the below
 
     ```
 	 _08_primary_foreign_key
@@ -125,8 +125,9 @@ If you want to write test script based on CTP tool, you must follow the below ru
   * the keyword "cases" and "answers" must be included
   * the root name of script(we suggest you give a meaningful root name, it will help reader to understand the intent of your script)
   * when you write one new script, answer file may be difficult to generate it, but you don't need worry about it, you just need touch one blank answer file which has same name as case's, but the extension of answer file must be ".answer", and then to execute
-           your script by using CTP tool,CTP tool will generate the related result file in cases folder which has same name as case's, but the extension of result should be ".result". And now you can examine the result contents are expected or not, once all contents 
-           are confirmed, you can just copy result file contents to answer file as the expected results for future reference in testing.   
+    your script by using CTP tool, CTP tool will generate the related result file in cases folder which has same name as case's. Conversely, if you don't touch one blank answer file under answers folder for your new case, CTP will think your new case is invalid.
+    For result file, the extension should be ".result", and you need examine the result contents by manual for the first time to decide that is expected or not, once all contents are confirmed, you can just copy result file contents to answer file as the 
+    expected results for future reference in testing.   
   * CTP supports all SQL statements which are supported by CUBRID, but I would like to clarify for some special syntax.
   * prepare statement, you just need write script as the below format, and CTP will do value binding 
            
@@ -164,7 +165,8 @@ If you want to write test script based on CTP tool, you must follow the below ru
 	                             /int_primary_key_test.answer
     ```
 
-   * or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
+   * or add "--@queryplan" flag to the above of the statement you want to check, and the following one statement will print query plan data. For the below example, 
+     the statement - "select /*+ recompile */ median(a) from x;" will print query plan data, but the second statement - "select /*+ recompile */ median(b) from x;" will not print query plan data.
     
         ```
 	--@queryplan
@@ -188,7 +190,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
         select /*+ recompile */ median(b) from x;
     ```
 
-   that will make the following statements are executed with the corresponding transaction isolation level. and if you want to make test execute with autocommit=true/false, 
+   that will make the following statements are executed with the corresponding transaction isolation level. And if you want to make test execute with autocommit=true/false, 
    you just need add "autocommit off" or "autocommit on;" into case. 
 
 ## License

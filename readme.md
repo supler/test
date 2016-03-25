@@ -163,6 +163,8 @@ If you want to write test script based on CTP tool, you must follow the below ru
 	                       /answers
 	                             /int_primary_key_test.answer
 ```
+
+
     or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
     
 ```

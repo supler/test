@@ -165,7 +165,8 @@ If you want to write test script based on CTP tool, you must follow the below ru
 ```
 
 
-    * or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
+        
+        * or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
     
 ```
 	--@queryplan

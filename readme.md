@@ -188,7 +188,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
         select /*+ recompile */ median(b) from x;
     ```
 
-   that will make the following statements are executed with the corresponding transaction isolation level.
+   that will make the following statements are executed with the corresponding transaction isolation level. and if you want to make test execute with autocommit=true/false, you just need add "autocommit off" or "autocommit on;" into case. 
 
 ## License
 CTP is published under the BSD 3-Cause license. See LICENSE.md for more details.

@@ -171,8 +171,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
 	select /*+ recompile */ median(a) from x;
 	select /*+ recompile */ median(b) from x;
 ```
-
-  * for the transaction isolation level, you can set it in your case script as the below syntax
+for the transaction isolation level, you can set it in your case script as the below syntax
 
 ```
         SET TRANSACTION ISOLATION LEVEL 1;
@@ -187,7 +186,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
         select /*+ recompile */ median(a) from x;
         select /*+ recompile */ median(b) from x;
 ```
-  that will make the following statements are executed with the corresponding transaction isolation level.
+that will make the following statements are executed with the corresponding transaction isolation level.
 
 ## License
 CTP is published under the BSD 3-Cause license. See LICENSE.md for more details.

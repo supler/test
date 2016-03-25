@@ -10,23 +10,23 @@ CTP as testing tool for an open source project CUBRID, which is developed based 
 ## Quick start
 * Execute sample testing with the below commands:
 
-``` 
+    ``` 
 
-    sh bin/ctp.sh sql -c conf/sample.conf
+        sh bin/ctp.sh sql -c conf/sample.conf
     
- ```
+     ```
  
 * Once the testing is finished, and then to start webconsole to see result
     
-```
+    ```
 
     sh bin/ctp.sh webconsole start
     
-```
+    ```
     
 * You will see the information as below
     
-```
+    ```
     $ sh bin/ctp.sh webconsole start
 	Config: /home/user/CTP/conf/webconsole.conf
 	Web Root: /home/user/CTP/sql/webconsole
@@ -35,7 +35,7 @@ CTP as testing tool for an open source project CUBRID, which is developed based 
 	Done
 	URL:  http://127.0.0.1:8888    
 	  
-```
+    ```
 	
 * Copy URL into browser, and you will see the result list
 
@@ -70,20 +70,20 @@ Using CTP involves steps:
 #### Review Results
 * Once testing is complete, result directory will be printed.
 
-```
------------------------
-Fail:0
-Success:1
-Total:1
-Elapse Time:193
-Test Result Directory:/home/user/CTP/sql/result/y2016/m3/schedule_linux_sql_64bit_24202122_10.0.0_1376
-Test Log:/home/user/CTP/sql/log/sql_10.0.0.1376_1458818452.log
------------------------
-
------------------------
-Testing End!
------------------------
-```
+    ```
+	-----------------------
+	Fail:0
+	Success:1
+	Total:1
+	Elapse Time:193
+	Test Result Directory:/home/user/CTP/sql/result/y2016/m3/schedule_linux_sql_64bit_24202122_10.0.0_1376
+	Test Log:/home/user/CTP/sql/log/sql_10.0.0.1376_1458818452.log
+	-----------------------
+	
+	-----------------------
+	Testing End!
+	-----------------------
+    ```
 * Go to Test Result Directory, and find the detailed results
 * If you want to check result from web browser, you can start webconsole service from CTP
   * ``sh bin/ctp.sh webconsole start``, the URL of results will be printed as the below
@@ -115,13 +115,13 @@ If you want to write test script based on CTP tool, you must follow the below ru
 * the extension of script file must be .sql, and the answer of script which will be used to examine success or fail must be end with .answer
 * the structure of script must same as the below
 
-```
+    ```
 	 _08_primary_foreign_key
 	                       /cases
 	                             /int_primary_key_test.sql
 	                       /answers
 	                             /int_primary_key_test.answer
-```
+    ```
   * the keyword "cases" and "answers" must be included
   * the root name of script(we suggest you give a meaningful root name, it will help reader to understand the intent of your script)
   * when you write one new script, answer file may be difficult to generate it, but you don't need worry about it, you just need touch one blank answer file which has same name as case's, but the extension of answer file must be ".answer", and then to execute
@@ -166,11 +166,11 @@ If you want to write test script based on CTP tool, you must follow the below ru
 
    * or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
     
-    ```
+        ```
 	--@queryplan
 	select /*+ recompile */ median(a) from x;
 	select /*+ recompile */ median(b) from x;
-    ```
+        ```
 
 * for the transaction isolation level, you can set it in your case script as the below syntax
 

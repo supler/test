@@ -59,8 +59,8 @@ Using CTP involves steps:
     * config_file in [sql] section will be used to the client charset, connection parameters(auto_commit=true/false), you can find this file from sql/configuration/test_config to reference or change
     * db_charset in [sql] section will be used to set database charset during db creation.
     * data_file in [sql] section will be used to the path of medium data file, since Medium testing will be executed based on an existing databases, so you must configure it.
-    * test_mode=yes and java_stored_procedure=yes must be configured during executing SQL testing, you can read the comment in sql.conf for the intention.
-    * other parameters in conf/sql.conf are in order to avoid ports conflict or improve the speed of testing execution, so they can be configured as optional 
+    * test_mode=yes need to be configured since testing will change database system parameters.
+    * other parameters in conf/medium.conf are in order to avoid ports conflict or improve the speed of testing execution, so they can be configured as optional 
 
 #### Run Tests
 * For SQL/Medium
@@ -188,7 +188,8 @@ If you want to write test script based on CTP tool, you must follow the below ru
         select /*+ recompile */ median(b) from x;
     ```
 
-   that will make the following statements are executed with the corresponding transaction isolation level. and if you want to make test execute with autocommit=true/false, you just need add "autocommit off" or "autocommit on;" into case. 
+   that will make the following statements are executed with the corresponding transaction isolation level. and if you want to make test execute with autocommit=true/false, 
+   you just need add "autocommit off" or "autocommit on;" into case. 
 
 ## License
 CTP is published under the BSD 3-Cause license. See LICENSE.md for more details.

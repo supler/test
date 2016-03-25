@@ -88,7 +88,7 @@ Testing End!
 * If you want to check result from web browser, you can start webconsole service from CTP
   * ``sh bin/ctp.sh webconsole start``, the URL of results will be printed as the below
 
-```
+```yaml
 Config: /home/user/CTP/conf/webconsole.conf
 Web Root: /home/user/CTP/sql/webconsole
 Begin to start ...
@@ -103,7 +103,7 @@ URL:  http://127.0.0.1:8887
 
 In most cases, you don't need to build CTP from source, unless you make some changes for source codes. If you want to build source, you need install ant first, and then to execute the following commands to build source codes.
 
-```
+```yaml
    ant clean dist
 ```
 
@@ -115,7 +115,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
 * the extension of script file must be .sql, and the answer of script which will be used to examine success or fail must be end with .answer
 * the structure of script must same as the below
 
-```
+```yaml
 	 _08_primary_foreign_key
 	                       /cases
 	                             /int_primary_key_test.sql
@@ -130,7 +130,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
   * CTP supports all SQL statements which are supported by CUBRID, but I would like to clarify for some special syntax.
   * prepare statement, you just need write script as the below format, and CTP will do value binding 
            
-```
+```yaml
            prepare st from 'select trunc(?,?)'
            execute st using date'2001-10-11',1;
            deallocate prepare st;
@@ -138,7 +138,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
            
   * user defined variables
            
-```
+```yaml
            set @v1=1;
            select @v1;
            drop variable @v1;
@@ -147,7 +147,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
   * for I18N scenario, you can set charset into script. If you want to run all cases with the different database charset and client charset, you just need configure the conf file you used for db_charset and client charset file under CTP/conf/,
              the value of db_charset will be used to db creation, and client charset files are based on CTP/sql/configuration/test_config/ directory, you can choose one that meets your required or create new one for your test.
            
-```
+```yaml
            set names iso88591 collate iso88591_en_ci;
            execute st1 using 'helloAaaAAaa', 'a', 2;
 ```
@@ -155,7 +155,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
 * for queryPlan, if you want to examine queryPlan from testing result, you will have two options to configure that, and once it is configured, the related SQL statement will print query plan data with results
   * touch one blank file name as case_name.queryPlan to save it into same directory with case, so the results of all queries statement will print query plan data.
 
-```
+```yaml
 	 _08_primary_foreign_key
 	                       /cases
 	                             /int_primary_key_test.sql
@@ -166,7 +166,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
 
   * or add --@queryplan in the above statement, the following statement of flag will print query plan data. 
     
-```
+```yaml
 	--@queryplan
 	select /*+ recompile */ median(a) from x;
 	select /*+ recompile */ median(b) from x;
@@ -174,7 +174,7 @@ If you want to write test script based on CTP tool, you must follow the below ru
 
 * for the transaction isolation level, you can set it in your case script as the below syntax
 
-```
+```yaml
         SET TRANSACTION ISOLATION LEVEL 1;
         select /*+ recompile */ median(a) from x;
         select /*+ recompile */ median(b) from x;

@@ -4,7 +4,7 @@
 CTP as testing tool for an open source project CUBRID, which is developed based on Java language, and it integrates functional testing and result showing into one suite. It is easy to execute testing with a simple configuration. 
 
 ## Requirements
-* Java 1.6 or higher, and configure Java environment variable "export JAVA_HOME=$java_installation_path".
+* Java 1.6 or higher, and configure Java environment variable "export JAVA_HOME=$java_installation_path$".
 * Install CUBRID build, and make sure the related environment variable of CUBRID is configured correctly.
 
 ## Quick start

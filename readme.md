@@ -1,4 +1,4 @@
-# CTP - CUBRID Test Program
+# CTP - CUBRID Test Program1
 
 ## Introduction
 CTP as testing tool for an open source project CUBRID, which is developed based on Java language, and it integrates functional testing and result showing into one suite. It is easy to execute testing with a simple configuration. 
